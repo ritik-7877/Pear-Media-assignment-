@@ -1,9 +1,14 @@
-# 🍐 Pear Media · AI Image & Text Studio
+# Pear Media Platform
 
-A full-stack web app built with **React + Vite** (frontend) and **Node.js/Express** (backend) that integrates **Google Gemini** and **OpenAI DALL-E 3** to provide two AI-powered creative workflows.
+A full-stack React and Express application that allows users to seamlessly test Text-to-Image generation workflows and Vision image variations without needing to define any authentication or API keys. Fully compatible with automated image fallbacks and intelligent mock systems.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-live-link.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue)](https://github.com/yourusername/pear-media)
+## 🚀 One-Click Deployment
+
+Click the button below to instantly deploy your full-stack application for free on Render.com:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ritik-7877/Pear-Media-assignment-)
+
+## Installation
 
 ---
 

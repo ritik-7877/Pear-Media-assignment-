@@ -1,6 +1,11 @@
 import express from "express";
 import cors from "cors";
 import multer from "multer";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
@@ -162,6 +167,14 @@ app.post("/api/generate-variation", async (req, res) => {
     console.error("Generate variation error:", err);
     res.status(500).json({ error: err.message });
   }
+});
+
+// ──────────────────────────────────────────────
+// HOST FRONTEND (Production Setup)
+// ──────────────────────────────────────────────
+app.use(express.static(path.join(__dirname, "dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001;
